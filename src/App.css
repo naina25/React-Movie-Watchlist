@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 1300px) {
+  .container {
+    width: 1260px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1360px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 1460px;
+  }
+}
+
+header {
+  background-color: rgb(59, 38, 136);
+}
+
+header .inner-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 0;
+}
+
+header a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header .brand a {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #dcbfec;
+  color: #075ca1;
+  border-radius: 5px;
+  font-weight: 700;
+  display: inline-block;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  line-height: 1.1;
+}
+
+.btn:hover {
+  opacity: 1;
+
+  cursor: pointer;
+  color: #022b4d;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  margin: 0 15px;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.nav-links a:last-child {
+  margin-right: 0;
 }
