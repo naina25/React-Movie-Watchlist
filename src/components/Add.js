@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import MovieCard from "./MovieCard";
 
 const Add = () => {
   const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
@@ -26,6 +27,8 @@ const Add = () => {
           console.log(err);
           setResults([]);
         });
+    } else {
+      setResults([]);
     }
   }, [query, API_KEY]);
 
@@ -40,13 +43,10 @@ const Add = () => {
               placeholder="Search for a movie"
               onChange={handleChange}
             />
-            {results.length > 0 && (
-              <ul>
-                {results.map((result) => (
-                  <li key={result.id}>{result.title}</li>
-                ))}
-              </ul>
-            )}
+            {results.length > 0 &&
+              results.map((result) => (
+                <MovieCard key={result.id} movie={result} />
+              ))}
           </div>
         </div>
       </div>
