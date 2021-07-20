@@ -9,8 +9,7 @@ body {
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0 !important;
 }
 
 @media (min-width: 1200px) {
@@ -36,6 +35,8 @@ body {
     width: 1460px;
   }
 }
+
+/* header styles */
 
 header {
   background-color: rgb(59, 38, 136);
@@ -66,7 +67,7 @@ header .nav-links {
 }
 
 .btn {
-  padding: 10px 15px;
+  padding: 8px 15px;
   background-color: #dcbfec;
   color: #075ca1;
   border-radius: 5px;
@@ -92,7 +93,7 @@ header .nav-links {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   margin: 0 15px;
 }
@@ -103,4 +104,92 @@ header .nav-links {
 
 .nav-links a:last-child {
   margin-right: 0;
+}
+
+/* Add Page */
+.add-content {
+  padding: 50px 15px;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.add-content .input-wrapper input {
+  width: 100%;
+  background-color: rgb(174, 156, 240);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #022b4d;
+  font-size: 1.25rem;
+  box-shadow: 3px 3px 10px rgb(59, 38, 136);
+  /* font-weight: bold; */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.add-content .input-wrapper input:focus {
+  box-shadow: 5px 5px 15px rgb(59, 38, 136);
+  border: none;
+  outline: none;
+}
+
+.add-content .input-wrapper input::placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+.movie-card {
+  margin: 30px 0;
+  display: flex;
+}
+
+.movie-card .poster-wrapper img,
+.filler-poster {
+  width: 90px;
+  height: 128px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #022b4d;
+  box-shadow: 0 3px 10px rgb(47, 46, 48);
+}
+
+.movie-card .info .title {
+  font-size: 1.25rem;
+  color: #03233d;
+  font-weight: 600;
+  margin: 0;
+}
+
+.movie-card .info .release-date {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #022b4d;
+  margin: 0;
+}
+
+.controls .btn {
+  margin-top: 40px;
+}
+
+@media (max-width: 590px) {
+  .controls .btn {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  .nav-links a {
+    font-size: 1rem;
+  }
 }
