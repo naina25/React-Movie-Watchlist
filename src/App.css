@@ -93,7 +93,7 @@ header .nav-links {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: all 0.3s ease;
   margin: 0 15px;
 }
@@ -219,7 +219,7 @@ header .nav-links {
 }
 
 .count-pill {
-  background-color: #6591b4;
+  background-color: rgb(59, 38, 136);
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
@@ -278,7 +278,7 @@ header .nav-links {
 
 .watchlist-movie-card:hover {
   border: none;
-  box-shadow: 0 3px 10px rgb(93, 53, 133);
+  box-shadow: 0 3px 15px rgb(78, 42, 114);
 }
 
 .watchlist-movie-card .inner-card-controls {

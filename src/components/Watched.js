@@ -9,11 +9,10 @@ const Watched = () => {
       <div className="container">
         <div className="header">
           <h1 className="heading">My Watched Movies</h1>
+          <span className="count-pill">
+            {watched.length} {watched.length > 1 ? "Movies" : "Movie"}
+          </span>
         </div>
-
-        <span className="count-pill">
-          {watched.length} {watched.length > 1 ? "Movies" : "Movie"}
-        </span>
 
         {watched.length > 0 ? (
           <div className="movie-grid">
