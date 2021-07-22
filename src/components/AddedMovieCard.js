@@ -1,6 +1,7 @@
 import React from "react";
+import MovieControls from "./MovieControls";
 
-const MyWatchlistedMovie = ({ movie, type }) => {
+const AddedMovieCard = ({ movie, type }) => {
   return (
     <div className="watchlist-movie-card">
       <div className="overlay">
@@ -12,9 +13,11 @@ const MyWatchlistedMovie = ({ movie, type }) => {
         ) : (
           <div className="filler-poster">No Poster!</div>
         )}
+
+        <MovieControls type={type} movie={movie} />
       </div>
     </div>
   );
 };
 
-export default MyWatchlistedMovie;
+export default AddedMovieCard;
